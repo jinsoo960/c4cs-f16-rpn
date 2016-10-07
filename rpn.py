@@ -20,7 +20,9 @@ def calculate(input):
 			stack.append(result)
 		else:
 			stack.append(int(token))
-		
+
+	if len(stack) != 1:
+		raise TypeError
 	return stack[0]
 
 def main():
