@@ -20,6 +20,7 @@ def calculate(input):
 			stack.append(result)
 		else:
 			stack.append(int(token))
+		
 	return stack[0]
 
 def main():
