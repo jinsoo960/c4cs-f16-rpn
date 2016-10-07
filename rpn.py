@@ -1,7 +1,21 @@
 #!/usr/bin/env python3
 
-def calculate(string):
-	pass
+def calculate(input):
+	stack = list()
+	for token in input.split():
+		if token == '+':
+			arg1 = stack.pop()
+			arg2 = stack.pop()
+			result = arg1 + arg2
+			stack.append(result)
+		elif token == '*':
+			arg1 = stack.pop()
+			arg2 = stack.pop()
+			result = arg1 * arg2
+			stack.append(result)
+		else:
+			stack.append(int(token))
+	return stack[0]
 
 def main():
 	while True:
