@@ -3,18 +3,36 @@ import rpn
 
 class TestBasics(unittest.TestCase):
 	def test_add(self):
-		result = rpn.calculate("1 1 +")
+		input = "1 1 +"
+		result = rpn.calculate(input)
+		print("Testing add")
+		print(input)
+		print(result)
 		self.assertEqual(2, result)
 	def test_multiply(self):
-		result = rpn.calculate("3 4 *")
+		input = "3 4 *"
+		result = rpn.calculate(input)
+		print("Testing multiply")
+		print(input)
+		print(result)
 		self.assertEqual(12, result)
 	def test_subtract(self):
-		result = rpn.calculate("5 3 -")
+		input = "5 3 -"
+		result = rpn.calculate(input)
+		print("Testing subtract")
+		print(input)
+		print(result)
 		self.assertEqual(2, result)
 	def test_toomanythings(self):
+		input = "1 2 3 +"
+		print("Testing invalid input")
+		print(input)
 		with self.assertRaises(TypeError):
-			rpn.calculate("1 2 3 +")
+			rpn.calculate(input)
 	def test_divide(self):
-		result = rpn.calculate("6 2 /")
+		input = "6 2 /"
+		result = rpn.calculate(input)
+		print("Testing divide")
+		print(input)
+		print(result)
 		self.assertEqual(3, result)
-		
