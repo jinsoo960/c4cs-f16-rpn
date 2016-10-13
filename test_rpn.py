@@ -38,9 +38,8 @@ class TestBasics(unittest.TestCase):
 		self.assertEqual(3, result)
 	def test_exponent(self):
 		input = "2 3 ^"
-		result = rpn.calculator(input)
+		result = rpn.calculate(input)
 		print("Testing exponent")
 		print(input)
 		print(result)
 		self.assertEqual(8, result)
-		
